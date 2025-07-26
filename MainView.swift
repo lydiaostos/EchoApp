@@ -7,6 +7,30 @@
 
 import SwiftUI
 import BatteryView
+import Foundation
+
+enum appTab: Hashable {
+    case home
+    case tutorial
+    case faces
+}
+
+enum VibrationFeedbackMode: String, CaseIterable, Identifiable {
+case off, on
+    var id: String { rawValue }
+}
+
+import Foundation
+enum spatialaudioToggle: String, CaseIterable, Identifiable {
+case off, on
+    var id: String { rawValue }
+}
+
+import Foundation
+enum HapticStrength: String, CaseIterable, Identifiable {
+    case low, medium, high
+    var id: String { rawValue }
+}
 
 struct MainView: View {
     @State var level: Float = 0.8
