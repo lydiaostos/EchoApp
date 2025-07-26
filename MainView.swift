@@ -1,10 +1,3 @@
-//
-//  MainView.swift
-//  test
-//
-//  Created by Lydia Ostos on 7/22/25.
-//
-
 import SwiftUI
 import BatteryView
 import Foundation
