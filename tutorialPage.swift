@@ -24,7 +24,7 @@ struct tutorialPage3: View {
                     HStack {
                         Text("Tutorial")
                             .font(.system(size: 43, weight: .bold))
-                            .padding(.top, 30)
+//                            .padding(.top, 30)
 
                         Spacer()
 
@@ -33,7 +33,7 @@ struct tutorialPage3: View {
                             .aspectRatio(contentMode: .fill)
                             .frame(width: 50, height: 50)
                             .cornerRadius(25)
-                            .padding(.top, 30)
+//                            .padding(.top, 30)
                     }
                     .padding()
 
@@ -92,43 +92,16 @@ struct tutorialPage3: View {
         }
     }
 }
-
+     
 #Preview {
-    struct PreviewWrapper: View {
-        @State var tutorialPageIndex = 2
-        var body: some View {
-            tutorialPage3(
-                selectedTab: .constant(.tutorial),
-                tutorialPageIndex: $tutorialPageIndex
-            )
+        struct PreviewWrapper: View {
+            @State private var index = 2
+            var body: some View {
+                tutorialPage3(
+                    selectedTab: .constant(.tutorial),
+                    tutorialPageIndex: $index
+                )
+            }
         }
+        return PreviewWrapper()
     }
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
-
-    
-
